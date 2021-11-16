@@ -1,0 +1,22 @@
+{% extends 'book/base.html'%} {% block body %}
+<br>
+<div class="container">
+    <div class="row">
+        <div class="col-md-6">
+            <img height="300px" src="{{ item.item_image }}" class="card">
+        </div>
+
+        <div class="col-md-6">
+            <h1>{{ item.item_name }}</h1>
+            <br>
+            <h5>{{ item.item_desc }}</h5>
+            <br>
+            <h3>{{ item.item_price}}</h3>
+            <a href="{% url 'book:delete_item' item.id %}" class="btn btn-danger">Delete</a>
+        </div>
+    </div>
+
+
+
+
+    {% endblock %}
